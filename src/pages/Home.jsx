@@ -37,19 +37,17 @@ const OverlayText = styled('div')({
 
 function Home() {
   return (
-    // <StyledHome>
-    //   <CssBaseline />
-    //   <Content>
-    //     <VideoBackground autoPlay muted loop>
-    //       <source src={backgroundVideo} type="video/mp4" />
-    //     </VideoBackground>
-    //     <OverlayText>
-          <h1>
-            ホームページ
-          </h1>
-    //     </OverlayText>
-    //   </Content>
-    // </StyledHome>
+    <StyledHome>
+    <CssBaseline />
+      <Content>
+        <VideoBackground autoPlay muted loop>
+            <source src={backgroundVideo} type="video/mp4" />
+        </VideoBackground>
+        <OverlayText>
+        <h1>ホームページ</h1>
+        </OverlayText>
+      </Content>
+    </StyledHome>
   );
 }
 

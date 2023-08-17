@@ -12,10 +12,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import DescriptionIcon from '@mui/icons-material/Description';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import { styled } from '@mui/system';
-import { Link } from '@mui/material';
-import Company from './pages/Company';
-import Home from './pages/Home';
-import {Route,BrowserRouter,Routes } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -28,13 +25,12 @@ function App() {
 
 
   return (
-    <BrowserRouter>
     <div style={{ display: 'flex' }}>
 
       <CssBaseline />
       <StyledDrawer variant="permanent" anchor="left">
         <List>
-          <Link href="/pages/Home" underline="none" color="inherit">
+          <Link to="/pages/Home">
             <ListItem button >
               <ListItemIcon>
                 <HomeIcon />
@@ -42,7 +38,7 @@ function App() {
               <ListItemText primary="ホーム" />
             </ListItem>
           </Link>
-          <Link href="/pages/Company" underline="none" color="inherit">
+          <Link to="/pages/Company">
             <ListItem button>
               <ListItemIcon>
                 <BusinessIcon />
@@ -76,14 +72,7 @@ function App() {
           </ListItem>
         </List>
       </StyledDrawer>
-      <main >
-        <Routes>
-          <Route path="/pages/Home/*" element={<Home/>} />
-          <Route path="/pages/Company/*" element={<Company />} />
-        </Routes>
-      </main>
     </div>
-    </BrowserRouter>
   );
 }
 
